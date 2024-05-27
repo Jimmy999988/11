@@ -205,10 +205,14 @@
 
     function searchCourse() {
         var college = document.getElementById("college").value;
-        if (college === "科技與工程學院") {
-            window.location.href = "result.html";
+        var department = document.getElementById("department").value;
+
+        if (college === "藝術學院" && department === "設計學系") {
+            window.location.href = "result_art.html";
+        } else if (college === "科技與工程學院" && department === "資訊工程學系") {
+            window.location.href = "result_tech.html";
         } else {
-            alert("查詢結果僅展示科技與工程學院的課程。");
+            alert("查詢結果僅展示特定學院和系所的課程。");
         }
     }
 </script>
